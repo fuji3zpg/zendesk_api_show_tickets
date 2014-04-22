@@ -1,6 +1,9 @@
 class ZendeskTicketsController < ApplicationController
   def index
-    logger.debug "ZendeskApiInit.client=#{ZendeskApiInit.client.to_s}"
     @tickets = ZendeskApiInit.client.tickets
+  end
+
+  def show
+    @ticket = ZendeskApiInit.client.tickets.find(id: params[:id])
   end
 end

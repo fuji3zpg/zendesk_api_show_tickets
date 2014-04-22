@@ -14,7 +14,7 @@
     <% @tickets.each do |ticket| %>
       <tr>
         <td><%= ticket.id %></td>
-        <td><%= ticket.subject %></td>
+        <td><%= link_to ticket.subject, "/zendesk_tickets/#{ticket.id}" %></td>
         <td><%= ticket.description %></td>
         <td><%= ticket.created_at %></td>
       </tr>

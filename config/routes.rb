@@ -1,5 +1,6 @@
 ZendeskApiWithRails::Application.routes.draw do
   get "zendesk_tickets/index"
+  get "zendesk_tickets/:id" => "zendesk_tickets#show"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
