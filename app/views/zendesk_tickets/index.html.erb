@@ -1,0 +1,23 @@
+<h1>ZendeskTickets#index</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Subject</th>
+      <th>Description</th>
+      <th>Created at</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tickets.each do |ticket| %>
+      <tr>
+        <td><%= ticket.id %></td>
+        <td><%= ticket.subject %></td>
+        <td><%= ticket.description %></td>
+        <td><%= ticket.created_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
